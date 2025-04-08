@@ -48,7 +48,7 @@ function showSidePanel(team) {
     </ul>
   `;
 
-  map.classList.add("active")
+  panel.classList.add("open")
   // Display the side panel
   panel.style.display = 'block';
 }
@@ -56,8 +56,11 @@ function showSidePanel(team) {
 // Function to close the side panel
 function closeSidePanel() {
   document.getElementById('side-panel').style.display = 'none';
-  document.getElementById('map').classList.remove("active");
+  document.getElementById('side-panel').classList.remove("open");
 }
+
+// Attach event listener to close button
+document.getElementById('close-btn').addEventListener('click', closeSidePanel);
 
 // Loop through teams and add markers
 nbaTeams.forEach(team => {

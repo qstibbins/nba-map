@@ -9,25 +9,40 @@ html {
   height: 100%;
 }
 
-#map.active {
-  height: 100vh; /* Full viewport height */
-  width: calc(100% - 300px); /* Adjust width considering the side panel */
+/* Base styles for the map and side panel */
+#map {
   position: absolute;
   top: 0;
   left: 0;
+  height: 100vh;
+  width: 100vw;
 }
 
 #side-panel {
   position: absolute;
   top: 0;
-  right: 0;
+  right: -320px; /* Start off-screen */
   width: 300px;
   height: 100%;
-  background-color: white;
-  overflow-y: auto;
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent */
+  box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+  transition: right 0.3s ease-in-out;
   z-index: 1000;
-  display: none; /* Initially hidden */
+  padding: 15px;
 }
+
+#side-panel.open {
+  right: 0; /* Slide in */
+}
+
+#close-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
 
 
 #side-panel h2 {
