@@ -8,8 +8,8 @@ let street = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 // const map = L.map('map').setView([39.5, -98.35], 4);
 
 let map = L.map("map", {
-  center: [39.5, -98.35],//[44.98517, -93.30474],
-  zoom: 4 //5
+  center: [37.5, -98.35],//[44.98517, -93.30474],
+  zoom: 5
 });
 
 // Then add the 'basemap' tile layer to the map.

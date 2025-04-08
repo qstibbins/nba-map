@@ -81,8 +81,8 @@ const nbaTeams = [
     {
       name: "Los Angeles Clippers",
       logo: "https://upload.wikimedia.org/wikipedia/en/e/ed/Los_Angeles_Clippers_%282024%29.svg",
-      lat: 34.0430,
-      lng: -118.2673 // Crypto.com Arena
+      lat: 33.9451,
+      lng: -118.3431 // Intuit Dome
     },
     {
       name: "Los Angeles Lakers",
