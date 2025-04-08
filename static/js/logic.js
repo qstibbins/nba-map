@@ -6,10 +6,10 @@ let street = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 // Create the map object with center and zoom options.
 // Initialize the map centered on USA
 // const map = L.map('map').setView([39.5, -98.35], 4);
-
+let mapCenter = {center: [37.5, -98.35], zoom: 5};
 let map = L.map("map", {
-  center: [37.5, -98.35],//[44.98517, -93.30474],
-  zoom: 5
+  center: mapCenter.center,//[44.98517, -93.30474],
+  zoom: mapCenter.zoom
 });
 
 // Then add the 'basemap' tile layer to the map.
@@ -87,7 +87,7 @@ nbaTeams.forEach(team => {
       zoomed = true;
       showSidePanel(team);
     } else {
-      map.setView([39.5, -98.35], 4); // Zoom back out
+      map.setView(mapCenter.center, mapCenter.zoom); // Zoom back out
       map.closePopup();
       zoomed = false;
       closeSidePanel();
